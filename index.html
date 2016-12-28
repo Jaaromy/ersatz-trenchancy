@@ -39,7 +39,7 @@
 
 		window.onload = function () {
 
-			var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create });
+			var game = new Phaser.Game(800, 600, Phaser.AUTO, 'main', { preload: preload, create: create });
 
 			function preload() {
 
@@ -70,11 +70,20 @@
 </div>
 
 <div class="container">
-	<div class="column">
-		<h3>Ersatz Trenchancy</h3>
-		<p>Your cool stuff will go here. For now <a href="http://tolerablebear.net">this is where you'll go for the original site and content.</a></p>
+	<div class="row">
+		<div class="column">
+			<h3>Ersatz Trenchancy</h3>
+			<p>Your cool stuff will go here. For now <a href="http://tolerablebear.net">this is where you'll go for the original site and content.</a></p>
+		</div>
 	</div>
 </div>
+
+<div class="container">
+	<div class="row">
+		<div id="main" class="column"></div>
+	</div>
+</div>
+
 
 
 <!-- End Document
