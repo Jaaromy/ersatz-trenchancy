@@ -28,29 +28,56 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="icon" type="image/png" href="images/favicon.png">
 
+	<!-- Libraries
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.min.js"></script>
+
 </head>
 
 <body>
+	<script type="text/javascript">
 
-	<!-- Primary Page Layout
+		window.onload = function () {
+
+			var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create });
+
+			function preload() {
+
+				game.load.image('logo', 'images/phaser.png');
+
+			}
+
+			function create() {
+
+				var logo = game.add.sprite(game.world.centerX, game.world.centerY, 'logo');
+				logo.anchor.setTo(0.5, 0.5);
+
+			}
+
+		};
+
+	</script>
+
+
+<!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<div class="container">
-		<div class="row">&nbsp;</div>
-		<div class="row">
-			<div class="column column-50"><a class="button button-outline" href="#">Follow</a></div>
-			<div class="column"><a class="button button-outline" href="#">Ball Pit</a></div>
-		</div>
+<div class="container">
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="column column-50"><a class="button button-outline" href="#">Follow</a></div>
+		<div class="column"><a class="button button-outline" href="#">Ball Pit</a></div>
 	</div>
+</div>
 
-	<div class="container">
-		<div class="column">
-			<h3>Ersatz Trenchancy</h3>
-			<p>Your cool stuff will go here. For now <a href="http://tolerablebear.net">this is where you'll go for the original site and content.</a></p>
-		</div>
+<div class="container">
+	<div class="column">
+		<h3>Ersatz Trenchancy</h3>
+		<p>Your cool stuff will go here. For now <a href="http://tolerablebear.net">this is where you'll go for the original site and content.</a></p>
 	</div>
+</div>
 
 
-	<!-- End Document
+<!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 
