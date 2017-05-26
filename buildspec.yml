@@ -4,6 +4,6 @@ phases:
   build:
     commands:
       - echo "******** Uploading to S3 ********"
-      - aws s3 sync . s3://jaaromyzierse.net --delete --exclude "*" --include "images/*" --include "lib/*" --include "css/*" --include "index.html"
+      - aws s3 sync . s3://jaaromyzierse.net --delete --exclude "*" --include "images/*" --include "*.js" --include "*.css" --include "index.html"
       - aws configure set preview.cloudfront true
-      - aws cloudfront create-invalidation --distribution-id EV3ER4BV64JJN --paths /css/* /images/* /lib/* /index.html
+      - aws cloudfront create-invalidation --distribution-id EV3ER4BV64JJN --paths /css* /images* /lib* /index.html
