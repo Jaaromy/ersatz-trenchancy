@@ -35,59 +35,36 @@
 </head>
 
 <body>
-	<script type="text/javascript">
+	<script type="text/javascript" src="lib/app.js"></script>
 
-		window.onload = function () {
-
-			var game = new Phaser.Game(800, 600, Phaser.AUTO, 'main', { preload: preload, create: create });
-
-			function preload() {
-				game.load.image('boid', 'images/triangle.png');
-				game.load.image('logo', 'images/phaser.png');
-
-			}
-
-			function create() {
-				var logo = game.add.sprite(game.world.centerX, game.world.centerY, 'logo');
-				logo.anchor.setTo(0.5, 0.5);
-				var boid = game.add.sprite(0, 0, 'boid');
-				boid.scale.setTo(0.1, 0.1);
-
-			}
-
-		};
-
-	</script>
-
-
-<!-- Primary Page Layout
+	<!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="container">
-	<div class="row">&nbsp;</div>
-	<div class="row">
-		<div class="column column-50"><a class="button button-outline" href="#">Follow</a></div>
-		<div class="column"><a class="button button-outline" href="#">Ball Pit</a></div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="column">
-			<h3>Ersatz Trenchancy</h3>
-			<p>Your cool stuff will go here. For now <a href="http://tolerablebear.net">this is where you'll go for the original site and content.</a></p>
+	<div class="container">
+		<div class="row">&nbsp;</div>
+		<div class="row">
+			<div class="column column-50"><a class="button button-outline" href="#">Follow</a></div>
+			<div class="column"><a class="button button-outline" href="#">Ball Pit</a></div>
 		</div>
 	</div>
-</div>
 
-<div class="container">
-	<div class="row">
-		<div id="main" class="column"></div>
+	<div class="container">
+		<div class="row">
+			<div class="column">
+				<h3>Ersatz Trenchancy</h3>
+				<p>Your cool stuff will go here. For now <a href="http://tolerablebear.net">this is where you'll go for the original site and content.</a></p>
+			</div>
+		</div>
 	</div>
-</div>
+
+	<div class="container">
+		<div class="row">
+			<div id="main" class="column"></div>
+		</div>
+	</div>
 
 
 
-<!-- End Document
+	<!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 
